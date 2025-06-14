@@ -1,0 +1,29 @@
+<html>
+
+<body>
+    <canvas></canvas>
+    <script>
+        const canvas = document.querySelector('canvas')
+        const ctx = canvas.getContext("2d")
+
+        canvas.width = 1024;
+        canvas.height = 720;
+
+        let x = canvas.width / 2;
+        let y = canvas.height / 2
+
+        function animation(){
+        requestAnimationFrame(animation)
+
+        ctx.fillStyle = "black"
+        ctx.fillRect(0,0, canvas.width, canvas.height)
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(x, y, 50, 50)
+        y++;
+        }
+        animation();
+    </script>
+</body>
+
+</html>
